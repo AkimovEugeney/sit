@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Choose your look</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="js/animation.js"></script>
+</head>
+
+<body>
+  <div class="menu">
+    <div class="menu__header">
+      <div class="container">
+        <button class="btn-reset close"></button>
+      </div>
+    </div>
+    <div class="menu__main">
+      <div class="container menu__container">
+        <div class="menu__left">
+          <nav class="nav menu__nav" title="Главное меню">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">О нас</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Создание стратегии</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Фотосъёмка</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Ретушь</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Аренда студии</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Перейти во Вконтакте">
+                <svg class="social__icon">
+                  <use xlink:href="global.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Перейти в Инстаграм">
+                <svg class="social__icon">
+                  <use xlink:href="global.svg#insta"></use>
+                </svg>
+              </a>
+              </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Перейти в Фейсбук">
+                <svg class="social__icon">
+                  <use xlink:href="global.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__right">
+          <div class="sub-menu">
+            <h3 class="sub-menu__title">Кейсы</h3>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Уста к устам</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Zara</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">New Balance</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Levi`s</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Rains</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Abercrombie &amp;&nbsp;Fitch</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Massimo Dutti</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sub-menu">
+            <h3 class="sub-menu__title">Партнёрам</h3>
+            <ul class="sub-menu__list list-reset">
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Условия партнёрства</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">Статистика</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link">О нас</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapp">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapp">
+          <button class="btn-reset burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <a class="logo">
+            <img src="img/logo.svg" alt="Логотип 12:21">
+          </a>
+          <nav class="header__nav nav" title="Мини-меню">
+            <a href="#" class="nav__link">Вход</a>
+            <a href="#" class="nav__link nav__link_arrow">Услуги</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__wrapp">
+            <div class="hero__inner">
+              <h1 class="hero__title">
+                Создадим имидж вашему бренду
+              </h1>
+              <p class="hero__descr">
+                Все этапы создания контента. От&nbsp;фотосессии до&nbsp;пре-пресса.
+              </p>
+              <button class="hero__btn btn-reset">
+                Ознакомиться
+              </button>
+            </div>
+            <div class="hero__photos photos">
+              <h2 class="photos__author">
+                Автор фото: Сергей Журавлёв.
+                <a class="photos__link" href="!#" target="_blank"> Портфолио автора</a>
+              </h2>
+              <div class="photos__wrapp">
+                <div class="photos__shape">
+                  <div class="photos__header">
+                    <img src="/img/12_21.svg" alt="12:21">
+                    <ul class="icons">
+                      <li class="icon">
+                        <a href="!#" class="icons__link">
+                          <svg class="icon photos__icon">
+                            <use xlink:href="global.svg#vk"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="icon">
+                        <a href="!#" class="icons__link">
+                          <svg class="icon photos__icon">
+                            <use xlink:href="global.svg#insta"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="icon">
+                        <a href="!#" class="icons__link">
+                          <svg class="icon photos__icon">
+                            <use xlink:href="global.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="photos__inner">
+                    <img class="photos__img photos__img_1" src="/img/photos-1.jpeg" alt="Photo 1">
+                    <div class="photos__small">
+                      <img class="photos__img photos__img_2" src="/img/photos-2.jpeg" alt="Photo 2">
+                      <img class="photos__img photos__img_3" src="/img/photos-3.jpeg" alt="Photo 3">
+                    </div>
+                  </div>
+                </div>
+                <div class="photos__shape"></div>
+                <div class="photos__shape"></div>
+                <div class="photos__shape"></div>
+                <div class="photos__shape"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
