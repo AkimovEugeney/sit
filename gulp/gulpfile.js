@@ -11,37 +11,34 @@ const image = require('gulp-image');
 const babel = require('gulp-babel');
 const notify = require('gulp-notify');
 const sourcemaps = require('gulp-sourcemaps');
-const del = require('del')
+const del = require('del');
+const gulpif = require('gulp-if');
+const gulpIf = require('gulp-if');
+
+let prod = false;
+
+function isProd(done) {
+  prod = true;
+  done();
+}
 
 function styles() {
   return src('app/scss/**/*.scss')
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(!prod, sourcemaps.init()))
     .pipe(concat('style.min.css'))
     .pipe(
       autoPrefixer({
         cascade: false,
       })
     )
-    .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(prod, scss({ outputStyle: 'compressed' })))
+    .pipe(gulpif(!prod, sourcemaps.write()))
     .pipe(dest('dist/css'))
     .pipe(browserSync.stream());
 }
 
-function stylesProd() {
-  return src('app/scss/**/*.scss')
-    .pipe(concat('style.min.css'))
-    .pipe(
-      autoPrefixer({
-        cascade: false,
-      })
-    )
-    .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(dest('dist/css'))
-}
-
 function clean() {
-  return del(['dist'])
+  return del(['dist']);
 }
 
 function resourses() {
@@ -51,9 +48,12 @@ function resourses() {
 function htmlMinify() {
   return src('app/**/*.html')
     .pipe(
-      htmlMin({
-        collapseWhitespace: true,
-      })
+      gulpIf(
+        prod,
+        htmlMin({
+          collapseWhitespace: true,
+        })
+      )
     )
     .pipe(dest('dist'))
     .pipe(browserSync.stream());
@@ -61,23 +61,20 @@ function htmlMinify() {
 
 function scripts() {
   return src(['app/js/componets/**/*.js', 'app/js/main.js'])
-    .pipe(sourcemaps.init())
+    .pipe(
+      gulpIf(
+        prod,
+        babel({
+          presets: ['@babel/env'],
+        })
+      )
+    )
+    .pipe(gulpif(!prod, sourcemaps.init()))
     .pipe(concat('main.min.js'))
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(prod, uglify().on('error', notify.onError())))
+    .pipe(gulpif(!prod, sourcemaps.write()))
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream());
-}
-
-function scriptsProd() {
-  return src(['app/js/componets/**/*.js', 'app/js/main.js'])
-    .pipe(
-      babel({
-        presets: ['@babel/env'],
-      })
-    )
-    .pipe(concat('main.min.js'))
-    .pipe(uglify().on('error', notify.onError()))
-    .pipe(dest('dist/js'))
 }
 
 function svgSprites() {
@@ -122,12 +119,14 @@ watch('app/resourses/**', resourses);
 exports.htmlMinify = htmlMinify();
 exports.scripts = scripts();
 exports.styles = styles();
-exports.default = series(clean,
+exports.default = series(
+  clean,
   parallel(resourses, htmlMinify, styles, scripts, images, svgSprites),
   watchFiles
 );
 
-exports.prod = series(clean,
-  parallel(htmlMinify, stylesProd, scriptsProd, images, svgSprites),
-  watchFiles
+exports.build = series(
+  clean,
+  isProd,
+  parallel(htmlMinify, styles, scripts, images, svgSprites)
 );
