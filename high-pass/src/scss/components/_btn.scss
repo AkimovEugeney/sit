@@ -1,0 +1,26 @@
+.btn {
+  padding: 15px 22px;
+  max-width: max-content;
+  border: 3px solid var(--color-orange);
+  background-color: var(--color-orange);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  color: var(--color-light);
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border: 3px solid var(--color-grenadier);
+  }
+
+  &:hover {
+    background-color: var(--color-tuscany);
+    border: 3px solid var(--color-tuscany);
+  }
+
+  &:active {
+    background-color: var(--color-grenadier);
+    border: 3px solid var(--color-grenadier);
+  }
+}

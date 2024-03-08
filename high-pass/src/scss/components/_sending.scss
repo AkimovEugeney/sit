@@ -1,0 +1,40 @@
+.sending {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 100%;
+
+  &__title {
+    font-family: TT Firs Neue;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--color-light);
+  }
+
+  &__form {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 15px 0;
+    padding-left: 23px;
+    background-color: var(--color-tandora);
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--color-silver);
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--color-orange);
+    }
+
+    &:hover::placeholder {
+      color: var(--color-orange);
+    }
+  }
+}

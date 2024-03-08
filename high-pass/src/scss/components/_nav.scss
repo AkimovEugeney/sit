@@ -1,0 +1,14 @@
+.nav {
+  &__list {
+    @include flex-v-center;
+    column-gap: 79px;
+  }
+
+  &__link {
+    font-family: TT Firs Neue;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--color-light);
+  }
+}

@@ -1,0 +1,33 @@
+.projects {
+  background-color: var(--color-light);
+
+  &__container {
+    padding: 68px 0;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: var(--color-black);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3,190px) 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--gap);
+  }
+
+  &__item:nth-child(4) {
+    grid-column: 4 / 6;
+  }
+
+  &__item:nth-child(5) {
+    grid-column: 1 / 4;
+  }
+
+  &__span {
+    padding: 6px 14px;
+    top: 7px;
+    right: 7px;
+  }
+}

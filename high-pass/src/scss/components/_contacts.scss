@@ -1,0 +1,128 @@
+.contacts {
+  padding-bottom: 69px;
+  background-color: var(--color-light);
+
+  &__title {
+    margin-bottom: 16px;
+    color: var(--color-black);
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 410px;
+    gap: 30px;
+  }
+  &__left {
+    position: relative;
+    margin-top: 6px;
+    height: 460px;
+  }
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 410px;
+    background-color: rgba(32, 32, 32, 0.85);
+    padding-top: 29px;
+    padding-left: 60px;
+    padding-right: 50px;
+  }
+  &__name {
+    margin-bottom: 5px;
+    font-family: TT Firs Neue;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--color-light);
+  }
+  &__adress {
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--color-silver);
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    font-family: TT Firs Neue;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    color: var(--color-orange);
+
+    &::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      background: url('../../img/tel.svg') no-repeat center;
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: var(--color-dastygray);
+    border-radius: 50%;
+    padding: 5px;
+    fill: var(--color-light);
+  }
+
+  &__app-name {
+    margin-bottom: 5px;
+    font-family: TT Firs Neue;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--color-black);
+  }
+  &__app-descr {
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--color-dastygray);
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__input {
+    width: 100%;
+    padding: 15px 23px;
+    border: none;
+    border: 1px solid var(--color-melcury);
+    background-color: var(--color-melcury);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--color-black);
+
+    transition: border 0.3s ease-in-out, color 0.3s ease-in-out;
+    &:focus {
+      outline: none;
+      border: 1px solid var(--color-orange);
+    }
+
+    &:hover::placeholder {
+      color: var(--color-orange);
+    }
+  }
+  &__textarea {
+    height: 150px;
+  }
+}
+
+.image {
+  height: 100%;
+}

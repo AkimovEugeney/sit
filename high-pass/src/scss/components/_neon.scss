@@ -1,0 +1,45 @@
+.neon-photoset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding-left: 59px;
+  padding-bottom: 60px;
+  @include image-set('../../img/neon-photoset');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &__wrapp {
+    max-width: 427px;
+  }
+
+  &__author {
+    margin-bottom: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--color-light);
+  }
+
+  &__name {
+    margin-bottom: 19px;
+    font-family: TT Firs Neue;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 104%;
+    color: var(--color-light);
+  }
+
+  &__btn {
+    padding: 13px 19px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+
+  &__span {
+    top: 16px;
+    right: 16px;
+  }
+}

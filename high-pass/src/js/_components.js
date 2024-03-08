@@ -1,0 +1,1 @@
+import './components/smooth-scroll'

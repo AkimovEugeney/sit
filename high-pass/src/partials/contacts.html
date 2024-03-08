@@ -1,0 +1,43 @@
+<section class="contacts">
+  <div class="container">
+    <h2 class="title contacts__title">
+      Контакты
+    </h2>
+    <div class="contacts__grid">
+      <div class="contacts__left">
+        <picture>
+          <source srcset="./../img/map.webp" type="image/webp">
+          <img loading="lazy" src="./../img/map.jpeg" class="image" width="100%" height="10%" alt="Карта">
+        </picture>
+        <div class="contacts__inner">
+          <h3 class="contacts__name">
+            Студия «High pass»
+          </h3>
+          <p class="contacts__adress">
+            107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+            <a href="tel:+749542423532" class="contacts__number">
+              +7 495 424-23-532
+            </a>
+          </p>
+          <svg class="contacts__close">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="contacts__right">
+        <h3 class="contacts__app-name">
+          Оставить заявку
+        </h3>
+        <p class="contacts__app-descr">
+          Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату съёмки или другого мероприятия
+        </p>
+        <form action="!#" class="contacts__form">
+          <input name="name" type="text" class="contacts__input" placeholder="Имя">
+          <input name="email" type="text" class="contacts__input" placeholder="Email">
+          <textarea name="comments" class="contacts__input contacts__textarea" placeholder="Комментарий"></textarea>
+          <button class="btn-reset btn form__btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

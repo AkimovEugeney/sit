@@ -1,0 +1,45 @@
+.header {
+  padding: 24px 0 26px 0;
+  height: 80px;
+  background-color: var(--color-black);
+
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__logo {
+    margin-right: 140px;
+  }
+
+  &__nav {
+    margin-right: auto;
+  }
+}
+
+.burger {
+  @include burger;
+  width: 20px;
+  height: 18px;
+  color: var(--color-light);
+  &::after {
+    width: 50%;
+  }
+  display: none;
+}
+
+.nav__link {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  &:focus {
+    outline: none;
+    background-color: var(--color-tuscany);
+  }
+
+  &:hover {
+    color: var(--color-orange);
+  }
+
+  &:active {
+    background-color: transparent;
+    color: var(--color-grenadier);
+  }
+}
