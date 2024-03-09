@@ -73,10 +73,10 @@
   }
 
   &_img1 {
-    @include image-set('../../img/projects-img6')
+    @include image-set('../img/projects-img6')
   }
 
   &_img2 {
-    @include image-set('../../img/projects-img7')
+    @include image-set('../img/projects-img7')
   }
 }

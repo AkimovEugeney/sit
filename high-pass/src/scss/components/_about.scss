@@ -37,7 +37,7 @@
       width: 100%;
       height: 255px;
       position: absolute;
-      @include image-set('../../img/about-img');
+      @include image-set('../img/about-img');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
