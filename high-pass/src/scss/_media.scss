@@ -30,6 +30,14 @@
     }
   }
 
+  .sending {
+    row-gap: 19px;
+  }
+
+  .contacts__form {
+    gap: 19px;
+  }
+
   .neon-photoset {
     padding: 0 30px 30px 30px;
     @include image-set('../img/neon-photoset-1024');
@@ -182,7 +190,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -42px;
+      bottom: -45px;
       padding: 12px var(--container-offset);
       background-color: var(--color-tandora);
       z-index: 20;
@@ -319,7 +327,7 @@
   }
 
   .btn {
-    padding: 16px 22px;
+    padding: 12px 19px;
   }
 }
 
@@ -363,6 +371,11 @@
   .header {
     padding-top: 25px;
     height: 70px;
+    &__nav {
+      bottom: -46px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
   }
 
   .nav__list {
@@ -413,7 +426,7 @@
     }
 
     &__name {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       font-size: 24px;
       line-height: 110%;
     }
@@ -423,6 +436,10 @@
       font-size: 14px;
       line-height: 16px;
     }
+  }
+
+  .sending {
+    row-gap: 14px;
   }
 
   .card-span {
@@ -468,7 +485,7 @@
   }
 
   .btn {
-    padding: 12px 22px;
+    padding: 10px 19px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -635,14 +652,14 @@
     }
 
     &__input {
-      padding: 12px 0;
+      padding: 11px 0;
       padding-left: 23px;
       font-size: 14px;
     }
   }
 
   .form__btn {
-    padding: 15px 22px;
+    padding: 12px 19px;
   }
 
   .footer {
