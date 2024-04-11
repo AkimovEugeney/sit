@@ -1,0 +1,13 @@
+.similar-products {
+  padding-bottom: 70px;
+  &__title {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: var(--gap);
+  }
+}

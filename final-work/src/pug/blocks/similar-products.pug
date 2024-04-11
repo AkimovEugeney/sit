@@ -1,0 +1,20 @@
+-
+  const cards = [
+    {id: 1, name: 'Диван велюровый “R-85”', price: '34 990 руб', rating: '4,5'},
+    {id: 2, name: 'Диван флоковый “H-58”', price: '23 990 руб', rating: '4,6'},
+    {id: 3, name: 'Диван велюровый “S-44”', price: '19 990 руб', rating: '4,5'},
+    {id: 4, name: 'Диван шиниловый “V-43”', price: '19 990 руб', rating: '4,8'},
+  ]
+
+section.similar-products 
+  .container 
+    h2.title.similar-products__title Похожие товары
+    ul.similar-products__list
+          each card in cards  
+            li.similar-products__item(id= card.id)
+              article.catalog-card
+                span.catalog-card__rating= card.rating
+                img.catalog-card__img(src="img/content/semilar-products-" + card.id + ".png", alt= card.name, loading="lazy")
+                p.catalog-card__name= card.name
+                p.price.catalog-card__price= card.price
+                button.btn-secondary.catalog-card__btn Купить

@@ -1,0 +1,24 @@
+.breadcrumbs {
+  padding-top: 19px;
+  // .breadcrumbs__list
+  &__list {
+    display: flex;
+    gap: 5px;
+  }
+  // .breadcrumbs__item
+  &__item:not(:last-child)::after {
+    content: " / ";
+    color: var(--color-grey);
+  }
+  // .breadcrumbs__link
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--color-grey);
+  }
+
+  &__item:last-child &__link {
+    color: var(--color-primary_shade);
+  }
+}

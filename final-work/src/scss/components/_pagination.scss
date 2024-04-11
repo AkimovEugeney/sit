@@ -1,0 +1,27 @@
+.pagination {
+  // .pagination__list
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__item:nth-child(3) {
+    display: none;
+  }
+  // .pagination__btn
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    max-width: 32px;
+    &.active {
+      background-color: var(--color-primary_shade);
+      border: 2px solid var(--color-primary_shade);
+      color: var(--color-white);
+    }
+  }
+}
+

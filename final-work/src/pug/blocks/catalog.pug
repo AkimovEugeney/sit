@@ -1,0 +1,84 @@
+-
+  const cards = [
+    {id: 1, name: 'Диван кожаный “R-94”', price: '94 990 руб', rating: '5,0'},
+    {id: 2, name: 'Диван апартековый “T-75”', price: '69 990 руб', rating: '4,9'},
+    {id: 3, name: 'Диван тканевый “D-31”', price: '28 490 руб', rating: '4,8'},
+    {id: 4, name: 'Диван велюровый “Y-68”', price: '28 490 руб', rating: '4,8'},
+    {id: 5, name: 'Диван из шинила “W-95”', price: '22 990 руб', rating: '4,8'},
+    {id: 6, name: 'Диван флоковый “G-41”', price: '17 990 руб', rating: '4,8'},
+    {id: 7, name: 'Диван шиниловый “V-43”', price: '19 990 руб', rating: '4,8'},
+    {id: 8, name: 'Диван велюровый “S-99”', price: '19 990 руб', rating: '4,7'},
+    {id: 9, name: 'Диван из кожзама “F-85”', price: '26 990 руб', rating: '4,7'},
+  ]
+
+.catalog
+  .container 
+    .catalog__grid 
+      aside.filter.catalog__filter  
+        h2.filter__title Фильтровать по:
+        .filter__block.filter__block--price
+          h3.filter__name Цвет
+          ul.filter__list 
+            li.filter__item
+              label 
+                input.checkbox.filter__checkbox(type="checkbox")
+                |Коричневый
+            li.filter__item
+              label 
+                input.checkbox.filter__checkbox(type="checkbox")
+                |Черный
+            li.filter__item
+              label 
+                input.checkbox.filter__checkbox(type="checkbox")
+                |Синий
+            li.filter__item
+              label 
+                input.checkbox.filter__checkbox(type="checkbox")
+                |Белый
+        .filter__block.filter__block--category
+          h3.filter__name Категория
+          ul.filter__list 
+            li.filter__item
+              label 
+                input.checkbox.filter__checkbox(type="checkbox")
+                |Диваны
+            li.filter__item
+              label 
+                input.checkbox.filter__checkbox(type="checkbox")
+                |Кресла
+        .filter__block
+          h3.filter__name Цена
+          .filter__price
+            label от
+              input.filter__price-input(type="text", placeholder="2000")
+            label до
+              input.filter__price-input(type="text", placeholder="150 000")
+      .catalog-new-collection 
+        img.catalog-new-collection__img(src="img/content/new-collection-catalog.jpeg", alt="Новая коллекция", loading="lazy")
+        .catalog-new-collection__inner 
+          h3.catalog-new-collection__title Оксфорд 1950
+          p.catalog-new-collection__descr Новая коллекция изысканных кресел
+          a.card-link-enter(href="#!")
+            p.card-link-enter--text В каталог
+            span.card-link-enter--btn 
+              <svg width="6.000000" height="9.000000" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path id="Vector_12" d="M0.62 0.56L4.06 4L0.62 7.43" stroke="#A65CF0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+      section.catalog__inner
+        h1.title-catalog Каталог 
+        ul.catalog__list
+          each card in cards  
+            li.catalog__item(id= card.id)
+              article.catalog-card
+                span.catalog-card__rating= card.rating
+                img.catalog-card__img(src="img/content/catalog-" + card.id + ".png", alt= card.name, loading="lazy")
+                p.catalog-card__name= card.name
+                p.price.catalog-card__price= card.price
+                button.btn-secondary.catalog-card__btn Купить
+        ul.catalog__pagination.pagination__list 
+          li.pagination__item 
+            button.btn-secondary.pagination__btn.active 1
+          li.pagination__item 
+            button.btn-secondary.pagination__btn 2
+          li.pagination__item 
+            button.btn-secondary.pagination__btn 3     

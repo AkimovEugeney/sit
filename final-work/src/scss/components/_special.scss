@@ -1,0 +1,15 @@
+.special {
+  // .special__list
+  &__list {
+    display: grid;
+    grid-template-columns: 296px minmax(296px, 624px) 296px;
+    gap: var(--gap);
+  }
+  // .special__item
+  .special__item:nth-child(4),
+  .special__item:nth-child(5),
+  .special__item:nth-child(6) {
+    display: none;
+  }
+}
+

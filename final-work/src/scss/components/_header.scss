@@ -1,0 +1,136 @@
+.header {
+  background-color: var(--color-white);
+  padding-bottom: 29px;
+  &__top {
+    background-color: var(--color-grey_light);
+    &--container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+    }
+  }
+
+  &__main {
+    background-color: var(--color-white);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 33px;
+  }
+
+  &__logo {
+    margin-right: 25px;
+  }
+  &__bottom--container {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+  }
+  &__use {
+    display: flex;
+    gap: var(--gap);
+  }
+  &__cabinet-link {
+    display: inline-block;
+    height: 28px;
+  }
+  &__basket-link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icon {
+  &--user {
+    width: 26px;
+    height: 28px;
+    fill: var(--color-primary);
+  }
+
+  &--basket {
+    width: 30px;
+    height: 28px;
+    fill: var(--color-primary);
+  }
+
+  &--search {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: #999999;
+    transition: fill 0.3s ease-in-out;
+  }
+}
+
+.basket__count {
+  display: block;
+  width: 14px;
+  height: 15px;
+  padding: 2px 4px;
+  transform: translateX(2px);
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--color-white);
+}
+
+.nav-grey {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+}
+
+.header__form {
+  position: relative;
+  width: 100%;
+}
+.search {
+  width: 100%;
+  padding: 19px 14px;
+  padding-left: 57px;
+  padding-right: 59px;
+  border: 2px solid var(--color-grey_light);
+
+  &:focus {
+    border-width: 2px;
+  }
+
+  &:hover {
+    border-width: 2px;
+  }
+}
+
+.search.active{
+  background-color: var(--color-grey_light);
+  border-color: transparent;
+}
+
+.btn--arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  & svg {
+    width: 6px;
+    height: 12px;
+  }
+}

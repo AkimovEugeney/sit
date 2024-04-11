@@ -1,0 +1,50 @@
+.useful {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    --offsets: 1;
+  }
+
+  &__item {
+    width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+  }
+
+  &__item:not(:nth-child(-n+2)) {
+    display: none;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--color-grey_light);
+    border-radius: var(--radius);
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 30px;
+    padding-top: 25px;
+    background-color: var(--color-grey_light);
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+
+  &__descr {
+    display: flex;
+    max-width: 550px;
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    color: var(--color-black);
+  }
+}

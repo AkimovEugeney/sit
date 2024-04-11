@@ -1,0 +1,32 @@
+$maxWidth: 1920;
+$contentWidth: 1280;
+$containerOffset: 35px;
+
+$containerWidth: calc(#{$contentWidth + px} + (#{$containerOffset} * 2));
+$containerFluidWidth: #{$maxWidth + px};
+
+:root {
+  // base
+  --font-family: "Open Sans", sans-serif;
+  --gap: 32px;
+  --radius: 10px;
+
+  // colors
+  --color-orange: #FF862F;
+  --color-white: #fff;
+  --color-black: #333333;
+  --color-primary: #A65CF0;
+  --color-primary_shade: #7033AC;
+  --color-grey: #999999;
+  --color-grey_shade: #666666;
+  --color-md_grey: #EAEAEA;
+  --color-primary_light: #C998FB;
+  --color-pink_violet: #EBD1FF;
+  --color-orange_light: #FFBD59;
+  --color-bone: #FFF5D1;
+  --color-orange_shade: #BB370E;
+  --color-grey_light: #F7F7F7;
+  --color-gold: #D5B986;
+  --color-pink_light: #F8EFFF;
+  --color-green_input: #B8EC64;
+}

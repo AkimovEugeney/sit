@@ -1,0 +1,7 @@
+.special-sofa {
+  background: url('../img/special-2-bg.png') no-repeat right 30px bottom 30px / 230px 107px;
+  background-color: var(--color-grey_light);
+  &__img {
+    @include adaptiv-value('mb', 16, 48, 1)
+  }
+}

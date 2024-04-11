@@ -1,0 +1,21 @@
+.discount {
+  max-width: $maxWidth+px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 400px;
+  background: url('../img/banner-discount.jpeg') no-repeat center;
+
+  &__wrapp {
+    padding: 80px 0;
+    min-height: 400px;
+  }
+
+  &__title {
+    max-width: 500px;
+    margin-bottom: 49px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 65px;
+    color: var(--color-grey);
+  }
+}

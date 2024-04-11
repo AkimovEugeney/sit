@@ -1,0 +1,41 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/form";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/logo";
+@import "./components/phone";
+@import "./components/navigate";
+@import "./components/discount";
+@import "./components/price";
+@import "./components/special";
+@import "./components/special-card";
+@import "./components/special-sofa";
+@import "./components/high-rating";
+@import "./components/catalog-card";
+@import "./components/new-collection";
+@import "./components/card-link-enter";
+@import "./components/top";
+@import "./components/top-card";
+@import "./components/useful";
+@import "./components/feedback";
+@import "./components/breadcrumbs";
+@import "./components/checkbox";
+@import "./components/filter";
+@import "./components/catalog";
+@import "./components/catalog-new-collection";
+@import "./components/pagination";
+@import "./components/chars";
+@import "./components/similar-products";
+@import "./components/card";
+
+@import "./media/media-index";
+@import "./media/media-catalog";
+@import "./media/media-card";
+
+

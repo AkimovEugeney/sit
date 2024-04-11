@@ -1,0 +1,45 @@
+.catalog {
+  padding-bottom: 134px;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "f c c c"
+     "f c c c"
+     "n c c c";
+
+    gap: var(--gap);
+  }
+
+  &__filter {
+    grid-area: f;
+  }
+
+  &__inner {
+    position: relative;
+    grid-area: c;
+  }
+
+  &-new-collection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-area: n;
+  }
+
+  &__list{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px,296px));
+    grid-template-rows: (3, 420px);
+    gap: var(--gap);
+  }
+
+  &__pagination {
+    position: absolute;
+    left: 50%;
+    bottom: -68px;
+    transform: translateX(-50%);
+  }
+}

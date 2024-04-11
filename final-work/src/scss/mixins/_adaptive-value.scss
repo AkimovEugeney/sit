@@ -1,0 +1,45 @@
+// Адаптивное свойство
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+
+    $propertySeating: map-get((
+      p : 'padding',
+      pt : 'padding-top',
+      pl : 'padding-left',
+      pb : 'padding-bottom',
+      pr : 'padding-right',
+      m : 'margin',
+      mt : 'margin-top',
+      ml : 'margin-left',
+      mb : 'margin-bottom',
+      mr : 'margin-right',
+      g : 'gap',
+      col-g : 'column-gap',
+      row-g : 'row-gap',
+      fz : 'font-size',
+      fw : 'font-weight',
+      lh : 'line-height',
+      ls : 'letter-spacing',
+  ), $property);
+
+@if $propertySeating != null {
+  $property: $propertySeating;
+}
+
+  $addSize: $startSize - $minSize;
+  @if $type==1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px;
+    @media (max-width: #{$contentWidth + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$contentWidth - 320}));
+    }
+  } @else if $type==2 {
+    //Только если больше контейнера
+    #{$property}: $startSize + px;
+    @media (min-width: #{$contentWidth + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  } @else {
+    //Всегда
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}

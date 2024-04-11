@@ -1,0 +1,15 @@
+.price {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--color-grey_shade);
+
+  &--start {
+    text-decoration: line-through;
+  }
+
+  &--end {
+    font-size: 18px;
+    color: var(--color-orange);
+  }
+}

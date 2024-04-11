@@ -1,0 +1,35 @@
+.chars {
+  margin: 0;
+  max-width: 544px;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__term {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 180%;
+    color: var(--color-grey);
+
+    &::after {
+      content: '.......................................................................................................................................................';
+      position: absolute;
+    }
+  }
+
+  &__val {
+    margin: 0;
+    width: 216px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 180%;
+    color: var(--color-black);
+  }
+}

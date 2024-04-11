@@ -1,0 +1,10 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__nav-list {
+  @include adaptiv-value('gap', 92, 32, 1);
+}

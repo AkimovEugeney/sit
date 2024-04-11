@@ -1,0 +1,9 @@
+mixin tel(tel)
+  -let clearTel = tel.replace(/[^+\d]/g, '')
+  a.phone(href="tel:" + clearTel)&attributes(attributes)
+    if block
+        block
+        =tel
+    else 
+      =tel
+    

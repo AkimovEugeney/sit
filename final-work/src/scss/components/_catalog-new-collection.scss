@@ -1,0 +1,27 @@
+.catalog-new-collection {
+  border-radius: 10px;
+  // .catalog-new-collection__img
+  &__img {
+    border-radius: 10px 10px 0px 0px;
+  }
+  // .catalog-new-collection__inner
+  &__inner {
+    padding: 30px 30px 32px 30px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--color-black);
+  }
+  // .catalog-new-collection__title
+  &__title {
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--color-gold);
+  }
+  // .catalog-new-collection__descr
+  &__descr {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-grey);
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,40 @@
+//+picture('1.jpeg','Прилив',[500,800],width,height)
+
+mixin picture(nameFull,altName,mediaArray,width,height)
+
+  -
+    function removeImageType(photoName) {
+    const dotIndex = photoName.lastIndexOf('.');
+    if(dotIndex === -1) {
+    return photoName;
+    }
+    return photoName.slice(0, dotIndex);
+    }
+
+    function pointType(point) {
+      if(point <= 1200 && point > 992) return '-1024.'
+      if(point <= 992 && point > 768) return '-lg.'
+      if(point <= 768 && point > 576) return '-768.'
+      if(point <= 576 && point >= 320) return '-320.'
+      if(point > 1200 || point < 320 || typeof point != number) console.log('Не корректное значение point in picture')
+    }
+    let typeInfo = ''
+    const name = removeImageType(nameFull)
+    const path = 'img/content/'
+
+  picture
+    each point in mediaArray
+      - 
+          let type = pointType(point)
+          if (point == 1) {
+            console.log(typeInfo)
+          return
+        } else {
+          typeInfo  = typeInfo + type + '\1 '
+        }  
+      - let nameFullReplace = nameFull.replace('.', type)
+      source(srcset= path + name + type + "webp" type="image/webp" media="(max-width:" + point + "px)")
+      source(srcset= path + nameFullReplace  media="(max-width:" + point + "px)") 
+
+    source(srcset= path + name + ".webp" type="image/webp") 
+    img(src= path + nameFull, alt= altName, width= width, height= height loading="lazy")&attributes(attributes) 

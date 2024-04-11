@@ -1,0 +1,35 @@
+.feedback {
+  &__title {
+    margin-bottom: 7px;
+  }
+  // .feedback__container
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+  }
+
+  &__img {
+    background: url('../img/form-bg.png') no-repeat right center / contain;
+  }
+
+  // .feedback__descr
+  &__descr {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--color-grey_shade);
+  }
+
+  // .feedback__form
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  // .feedback__btn
+  &__btn {
+    margin-bottom: 12px;
+  }
+}

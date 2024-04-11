@@ -1,0 +1,11 @@
+mixin nav(names,nav, title='Главное меню') 
+  nav(class= nav title=title)
+    ul(class= nav + '__list')&attributes(attributes)
+      each name in names 
+        if typeof name == 'object'
+          each val, key in name
+            li(class= nav + '__item')
+              a(class='link ' + nav + '__list' href="#" + key data-scroll)= val
+        else 
+          li(class= nav + '__item')
+            a(class='link ' + nav + '__link' href="#!")= name

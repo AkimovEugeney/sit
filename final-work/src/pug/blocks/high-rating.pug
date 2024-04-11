@@ -1,0 +1,23 @@
+-
+  const cards = [
+    {id: 1, name: 'Диван кожаный “R-94”', price: '94 990 руб', rating: '5,0'},
+    {id: 2, name: 'Диван апартековый “T-75”', price: '69 990 руб', rating: '4,9'},
+    {id: 3, name: 'Диван тканевый “D-31”', price: '28 490 руб', rating: '4,8'},
+    {id: 4, name: 'Диван велюровый “Y-68”', price: '28 490 руб', rating: '4,8'},
+    {id: 5, name: 'Диван из шинила “W-95”', price: '22 990 руб', rating: '4,8'},
+    {id: 6, name: 'Диван флоковый “G-41”', price: '17 990 руб', rating: '4,8'},
+    {id: 7, name: 'Диван шиниловый “V-43”', price: '19 990 руб', rating: '4,8'},
+    {id: 8, name: 'Диван велюровый “S-99”', price: '19 990 руб', rating: '4,7'},
+  ]
+section.section.high-rating 
+  .container 
+    h2.title.high-rating__title Высокий рейтинг
+    ul.high-rating__list
+      each card in cards  
+        li.high-rating__item(id= card.id)
+          article.catalog-card
+            span.catalog-card__rating= card.rating
+            img.catalog-card__img(src="img/content/catalog-" + card.id + ".png", alt= card.name, loading="lazy")
+            p.catalog-card__name= card.name
+            p.price.catalog-card__price= card.price
+            button.btn-secondary.catalog-card__btn Купить

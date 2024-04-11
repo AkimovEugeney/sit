@@ -1,0 +1,24 @@
+extends ../layout/main
+block variables
+  -let title = 'SitDownPls- Диван тканевый прямой “D-31”'
+
+block header 
+  .container
+    .breadcrumbs
+      ul.breadcrumbs__list 
+        li.breadcrumbs__item 
+          a.nav-grey__link.breadcrumbs__link(href="#!") Главная
+        li.breadcrumbs__item 
+          a.nav-grey__link.breadcrumbs__link(href="#!") Каталог
+        li.breadcrumbs__item 
+          a.nav-grey__link.breadcrumbs__link(href="#!") Диваны
+        li.breadcrumbs__item 
+          a.nav-grey__link.breadcrumbs__link(href="#!") Прямые диваны
+        li.breadcrumbs__item 
+          a.nav-grey__link.breadcrumbs__link(href="#!") D-31    
+
+
+block content
+  include ../blocks/card
+  include ../blocks/similar-products
+
